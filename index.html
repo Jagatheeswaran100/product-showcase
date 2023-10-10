@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Showcase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="sectionContent">
+        <header>
+            <a href="#"><img src="images/pepsi_logo.png" alt="" class="pepsi_logo"></a>
+            <div class="toggleMenu" onclick="menuToggle()"></div>
+            <ul class="navigationBar">
+                <li><a href="">Home</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">What's New</a></li>
+                <li><a href="">Newsletter</a></li>
+                <li><a href="">Contact</a></li>
+                <!-- <li><a href="">Home</a></li> -->
+            </ul>
+
+        </header>
+
+        <div class="content">
+            <div class="textContent">
+                <h2>That's What<br><span>I like</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam explicabo quod rem earum asperiores
+                    molestias, necessitatibus nihil quibusdam voluptatem delectus, possimus voluptatibus laborum? Autem
+                    asperiores quis laudantium assumenda ab minus.</p>
+                <a href="#">View all products</a>
+            </div>
+            <div class="imgContent">
+                <img src="images/Titan_Pep_Can.png" alt="" class="bluePepsi" width="250px">
+            </div>
+        </div>
+        <ul class="pepsiCans">
+            <li><img src="images/Titan_Pep_Can.png" alt=""
+                    onclick="imgChange('images/Titan_Pep_Can.png');changeBgColor('#0062be')"></li>
+            <li><img src="images/Titan_CFDP_Can.png" alt=""
+                    onclick="imgChange('images/Titan_CFDP_Can.png');changeBgColor('#e60c2c')"></li>
+            <li><img src="images/Titan_PZ_Can.png" alt=""
+                    onclick="imgChange('images/Titan_PZ_Can.png');changeBgColor('#272829')"></li>
+        </ul>
+        <ul class="socialMedia">
+            <li><a href=""><img src="images/facebook_logo.png" alt=""></a></li>
+            <li><a href=""><img src="images/twitter_logo.png" alt=""></a></li>
+            <li><a href=""><img src="images/instagram_logo.png" alt=""></a></li>
+        </ul>
+    </section>
+
+
+    <script>
+        function imgChange(anything) {
+            document.querySelector('.bluePepsi').src = anything;
+        }
+        function changeBgColor(color) {
+            const bgColor = document.querySelector('.sectionContent');
+            bgColor.style.background = color;
+        }
+
+        function menuToggle() {
+            const toggleMenu = document.querySelector('.toggleMenu');
+            toggleMenu.classList.toggle('active');
+            const navigationBar = document.querySelector('.navigationBar');
+            navigationBar.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
